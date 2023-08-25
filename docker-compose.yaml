@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  site:
+
+    image: 'compliance'
+    ports:
+      - "8000:80"
+    build:
+      context: .
+      dockerfile: dockerfile
+
+    restart: always
+    # restart: on-failure
