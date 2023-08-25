@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -34,11 +35,18 @@
     "extends": [
       "plugin:vue/vue3-essential",
       "eslint:recommended",
+      "prettier",
       "@vue/typescript/recommended",
       "plugin:prettier/recommended"
     ],
+    "globals": {
+      "defineProps": "readonly",
+      "defineEmits": "readonly",
+      "defineExpose": "readonly",
+      "withDefaults": "readonly"
+    },
     "parserOptions": {
-      "ecmaVersion": 2020
+      "ecmaVersion": "latest"
     },
     "rules": {}
   },
